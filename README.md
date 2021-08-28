@@ -1,7 +1,11 @@
+<img src="logo.svg" width=100%>
+
 Improvements over default conceal,
 
 1. Skip over concealed text during cursor movement. (default: normal mode)
 2. Autoreveal concealed characters near cursor. (default: insert mode)
+
+---
 
 The following default autocommands can be disabled with `let g:custom_betterconcealed=1`,
 
