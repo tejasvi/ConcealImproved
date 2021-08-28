@@ -1,7 +1,7 @@
-BetterConcealed improves the default conceal behaviour in two ways,
+Improvements over default conceal,
 
 1. Skip over concealed text during cursor movement. (default: normal mode)
-2. Reveal concealed characters near cursor. (default: insert mode)
+2. Autoreveal concealed characters near cursor. (default: insert mode)
 
 The following default autocommands can be disabled with `let g:custom_betterconcealed=1`,
 
