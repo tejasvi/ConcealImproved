@@ -10,8 +10,8 @@ Improvements over default conceal:
 The following default autocommands can be disabled with `let g:custom_betterconcealed=1`:
 
 ```
-autocmd CursorMoved * call betterconcealed#skip_conceal()
-autocmd CursorMovedI * call betterconcealed#reveal_near_cursor()
+autocmd CursorMoved * call ConcealImproved#skip_conceal()
+autocmd CursorMovedI * call ConcealImproved#reveal_near_cursor()
 autocmd InsertLeave * set concealcursor=ni
 ```
 

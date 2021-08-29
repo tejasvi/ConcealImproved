@@ -1,9 +1,9 @@
-if exists("g:betterconcealed")
+if exists("g:ConcealImproved")
     finish
 endif
-let g:betterconcealed = 1
+let g:ConcealImproved = 1
 
-function! betterconcealed#skip_conceal()
+function! ConcealImproved#skip_conceal()
 	if !exists('w:last_col') | let w:last_col = 0 | endif
 	let l:cur_col = col('.')
     let l:cur_line = line('.')
@@ -25,7 +25,7 @@ function! betterconcealed#skip_conceal()
     let w:last_col = col('.')
 endfun
 
-function! betterconcealed#reveal_near_cursor()
+function! ConcealImproved#reveal_near_cursor()
     let l:line = line('.')
     let l:col = col('.')
 	let l:should_conceal = 1
@@ -41,8 +41,8 @@ function! betterconcealed#reveal_near_cursor()
 	endif
 endfun
 
-if !(has('g:custom_betterconcealed') && g:custom_betterconcealed)
-    autocmd CursorMoved * call betterconcealed#skip_conceal()
-    autocmd CursorMovedI * call betterconcealed#reveal_near_cursor()
+if !(has('g:custom_ConcealImproved') && g:custom_ConcealImproved)
+    autocmd CursorMoved * call ConcealImproved#skip_conceal()
+    autocmd CursorMovedI * call ConcealImproved#reveal_near_cursor()
     autocmd InsertLeave * set concealcursor=ni
 endif
