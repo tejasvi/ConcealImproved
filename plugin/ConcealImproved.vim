@@ -41,7 +41,7 @@ function! ConcealImproved#reveal_near_cursor()
 	endif
 endfun
 
-if !(has('g:custom_ConcealImproved') && g:custom_ConcealImproved)
+if !(exists('g:custom_ConcealImproved') && g:custom_ConcealImproved)
     autocmd CursorMoved * call ConcealImproved#skip_conceal()
     autocmd CursorMovedI * call ConcealImproved#reveal_near_cursor()
     autocmd InsertLeave * set concealcursor=ni
