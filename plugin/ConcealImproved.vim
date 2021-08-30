@@ -29,7 +29,7 @@ function! ConcealImproved#reveal_near_cursor()
     let l:line = line('.')
     let l:col = col('.')
 	let l:should_conceal = 1
-	for dx in range(0, 2)
+	for dx in range(-2, 1)
 		if synconcealed(l:line, l:col+dx)[0]
 			let l:should_conceal = 0
 			set concealcursor=
