@@ -11,7 +11,7 @@ The following default autocommands can be disabled with `let g:custom_betterconc
 
 ```
 autocmd CursorMoved * call ConcealImproved#skip_conceal()
-autocmd CursorMovedI * call ConcealImproved#reveal_near_cursor()
+autocmd CursorMovedI,InsertEnter * call ConcealImproved#reveal_near_cursor()
 autocmd InsertLeave * set concealcursor=ni
 ```
 
