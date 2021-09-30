@@ -1,4 +1,4 @@
-if exists("g:ConcealImproved")
+if exists("g:ConcealImproved") || exists('g:vscode')
     finish
 endif
 let g:ConcealImproved = 1
